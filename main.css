@@ -1,0 +1,457 @@
+* {
+	user-select:none;
+	cursor:default;
+	outline:0!important;
+	animation-timing-function:none; /* wtf */
+}
+
+body {
+	overflow:hidden;
+}
+
+#space_title {
+	position:absolute;
+	margin:10px 0px 10px 0px;
+	left:44%;
+	font-family:exo;
+	font-size:55px;
+
+	background: -webkit-linear-gradient(320deg,blue,black);
+	background-position:1px;
+  	-webkit-background-clip: text;
+ 	-webkit-text-fill-color: transparent;
+ 	animation:title_gradient 25s ease-in-out;
+ 	animation-fill-mode:forwards;
+}
+
+@keyframes title_gradient {
+	0% {
+		background-position:1px;
+	}
+	99% {
+		background-position:150px;
+	}
+	100% {
+		background-position:130px;
+	}
+}
+
+#space_background {
+	width:100%;
+	height:75%;
+	position:relative;
+	top:12%;
+	/*background-image:url('bg.jpg');*/
+	background:#05061A;
+	overflow:hidden;
+}
+
+#sun {
+	width:80px;
+	height:80px;
+	border-radius:50%;
+	background-color:yellow;
+	position:absolute;
+	left:0;right:0;top:-20px;bottom:0;margin:auto;
+	animation:lighting_sun 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+.circle {
+	border-radius:50%;
+	border:1px solid gray;
+	position:absolute;
+	opacity:0.5;
+	left:-3.2px;right:0;top:-20px;bottom:0;margin:auto;
+}
+
+#circle1 {
+	height:200px;
+	width:200px;
+}
+
+#circle2 { /* first planet */
+	height:350px;
+	width:350px;
+}
+
+#circle3 {
+	height:500px;
+	width:500px;
+}
+
+#circle4 {
+	height:650px;
+	width:650px;
+}
+
+#circle5 {
+	height:800px;
+	width:800px;
+}
+
+#circle6 {
+	height:950px;
+	width:950px;
+}
+
+#circle7 {
+	height:1100px;
+	width:1100px;
+}
+
+#circle8 {
+	height:1250px;
+	width:1250px;
+}
+
+.planet {
+	border-radius:50%;
+	position:absolute;
+	box-shadow: inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	opacity:0.98;
+	animation-fill-mode:forwards;
+}
+
+.p_path {
+	height:1500px;
+	width:1400px;
+	opacity:1.0;
+	position:absolute;
+	left:-3.2px;right:0;top:-20px;bottom:0;margin:auto;
+}
+
+#merkuriy_path {
+	animation:rotate3 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+#merkuriy {
+	width:20px;
+	height:20px;
+	background-color:darkslategray;
+	left:-200.2px;right:0;top:-20px;bottom:0;margin:auto;
+}
+
+#venera_path {
+	animation:rotate3 60s linear;
+	animation-direction:reverse;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+#venera {
+	width:15px;
+	height:15px;
+	background-color:#FFC8A8;
+	left:-350.2px;right:0;top:-20px;bottom:0;margin:auto;
+}
+
+#earth_path {
+	animation:rotate2 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+#earth {
+	background-color:#00FF7F;
+	width:22px;
+	height:22px;
+	left:-500.2px;right:0px;top:-20px;bottom:0;margin:auto;
+}
+
+#mars_path {
+	animation:rotate2 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+#mars {
+	background-color:#A91D11;
+	width:8px;
+	height:8px;
+	left:0px;right:-650.2px;top:-20px;bottom:0;margin:auto;
+}
+
+#yupiter_path {
+	animation:rotate 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+	animation-direction:reverse;
+}
+
+#yupiter {
+	width:50px;
+	height:50px;
+	left:-800.2px;right:0px;top:-20px;bottom:0;margin:auto;
+	background:orange;
+}
+
+#saturn_path {
+	animation:rotate2 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+#saturn {
+	background:#FAFAD2;
+	background-position:300%;
+	width:45px;
+	height:45px;
+	left:-950.2px;right:0px;top:-20px;bottom:0;margin:auto;
+}
+
+@keyframes saturn_broke {
+	0% {
+		background:#FAFAD2 url('broken.jpg');
+		background-position:300%;
+	}
+	100% {
+		background:#FAFAD2 url('broken.jpg');
+		background-position:900%;
+	}
+}
+
+#uran_path {
+	animation:rotate3 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+#uran {
+	width:25px;
+	height:25px;
+	background-color:#ABCDEF;
+	left:-1100.9px;right:0px;top:-20px;bottom:0;margin:auto;
+}
+
+#neptun_path {
+	animation:rotate2 60s linear;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+}
+
+#neptun {
+	width:23px;
+	height:23px;
+	background-color:#62639B;
+	left:-1250.9px;right:0px;top:-20px;bottom:0;margin:auto;
+}
+
+@keyframes rotate { /* planet rotating */
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes rotate2 {
+	0% {
+		transform:rotate(155deg);
+	}
+	100% {
+		transform:rotate(515deg);
+	}
+}
+
+@keyframes rotate3 {
+	0% {
+		transform:rotate(210deg);
+	}
+	100% {
+		transform:rotate(570deg);
+	}
+}
+
+@keyframes lighting_sun {
+	0% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,1), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	10% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.8), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	20% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,1), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	30% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.6), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	40% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.8), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	50% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.55), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	60% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.9), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	70% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.7), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	80% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.55), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	90% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,.65), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+	100% {
+		box-shadow: 0px 0px 90px 0px rgba(217,255,0,1), inset 0px -132px 204px -126px rgba(0,0,0,0.38);
+	}
+}
+
+/* control */
+
+#control_box {
+	position: absolute;
+	right:120px;
+	bottom:2px;
+	display:block;
+	height:100px;
+	width:400px;
+}
+
+.control_text {
+	margin:0px;
+}
+
+#year_container_nu {
+	border:2px solid black;
+	width:250px;
+	height:100px;
+	position:absolute;
+	bottom:2px;
+	right:7.5px;
+	overflow:scroll;
+}
+
+#year_nu {
+	margin:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-right:-50%;
+    transform: translate(-50%, -50%);
+	font-family:exo;
+	font-size:45px;
+}
+
+#control_speed_tx {
+	position:absolute;
+	left:95px;
+	top:10px;
+}
+
+#time_speed {
+	position:absolute;
+	top:40px;
+	left:67px;
+}
+
+.setting_tx {
+	display:inline-block;
+	position:relative;
+	top:60px;
+	margin-right:65px;
+	left:73px;
+}
+
+#smooth_checkbox {
+	zoom:1.2;
+	position:absolute;
+	left:680px;
+	bottom:33px;
+}
+
+#smooth_chk_tx {
+	position:absolute;
+	left:847px;
+	bottom:-5px; /* 19.5 // 42 */
+	font-size:40px;
+	font-family: 'Tangerine', serif;
+}
+
+#byoles {
+	z-index:-9999999;
+	/*margin:0;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-right:-50%;
+    transform: translate(-50%, -50%);*/
+    position:absolute;
+    top:35%;
+    left:30%;
+    color:white;
+    font-size:50px;
+    font-family: 'Indie Flower', cursive;
+    animation-fill-mode:forwards;
+    animation-duration:4s;
+}
+
+#meteori {
+	filter:invert(6%);
+	position:absolute;
+	left:-0.2px;right:0;top:-20px;bottom:0;margin:auto;
+	transform:scale(0.8);
+	animation:meteor_rotating 90s infinite;
+	animation-fill-mode:forwards;
+}
+
+@keyframes meteor_rotating {
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+#close {
+	position:absolute;
+	right:15px;
+	top:75px;
+}
+
+#circle_close {
+	position:absolute;
+	right:50px;
+	top:75px;
+}
+
+#cinema_view {
+	position:absolute;
+	top:72px;
+	border-radius:10px;
+}
+
+.core_control {
+	z-index:100000000000000000000000000000;
+}
+
+#back_cinema {
+	position:absolute;
+	z-index:-999999999;
+	top:.0000000001px;
+	left:.00000000001px;
+}
+
+body {
+	transition:3.5s;
+}
+
+#reload_page {
+	position:absolute;
+	right:5px;
+	top:5px;
+	transition:1s;
+}
+
+#reload_page:hover {
+	transform:scale(1.1);
+}
+
+@keyframes reload_hi

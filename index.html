@@ -1,0 +1,61 @@
+<html>
+<head>
+	<!-- incs -->
+	<title>SPACE</title>
+	<meta charset="utf-8">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="animation.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<!-- JS -->
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<!-- Fonts for online users  class start_input_gogogo -->
+	<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> <!-- EXO -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> <!-- CONDENSED -->
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> <!-- INDIE FLOWER -->
+	 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"> <!-- TANGERINE -->
+</head>
+<body>
+	<h1 class="animated fadeInUp start_input_gogogo" id="space_title">SPACE</h1>
+	<button onclick="location.href='/'" class="animated fadeInUp start_input_gogogo core_control" id="reload_page">↺</button>
+	<button class="animated fadeInUp start_input_gogogo core_control" id="close">∞</button>
+	<button class="animated fadeInUp start_input_gogogo core_control" id="circle_close">○</button>
+	<button class="animated fadeInUp start_input_gogogo core_control" id="cinema_view">🎬</button>
+	<div class="container" id="space_background">
+		<h1 id="byoles">MADED BY OLES ODYNETS</h1>
+		<!-- create reload page button -->
+		<div id="sun" class="obj star"></div>
+		<img src="meteori.png" id="meteori" class="obj"></img>
+
+		<div id="circle1" class="obj fp circle"></div>
+		<div id="circle2" class="obj fp circle"></div>
+		<div id="circle3" class="obj fp circle"></div>
+		<div id="circle4" class="obj fp circle"></div>
+		<div id="circle5" class="obj fp circle"></div>
+		<div id="circle6" class="obj fp circle"></div>
+		<div id="circle7" class="obj fp circle"></div>
+		<div id="circle8" class="obj fp circle"></div>
+
+		<div class="obj p_path" id="merkuriy_path"><div id="merkuriy" class="obj planet"></div></div>
+		<div class="obj p_path" id="venera_path"><div id="venera" class="obj planet"></div></div>
+		<div class="obj p_path" id="earth_path"><div id="earth" class="obj planet"></div></div>
+		<div class="obj p_path" id="mars_path"><div id="mars" class="obj planet"></div></div>
+		<div class="obj p_path" id="yupiter_path"><div id="yupiter" class="obj planet"></div></div>
+		<div class="obj p_path" id="saturn_path"><div id="saturn" class="obj planet"></div></div>
+		<div class="obj p_path" id="uran_path"><div id="uran" class="obj planet"></div></div>
+		<div class="obj p_path" id="neptun_path"><div id="neptun" class="obj planet"></div></div>
+
+	</div>
+
+	<div id="control_box" class="control_fx container">
+		<!-- control[timelapse] -->
+		<h2 id="control_speed_tx" class="animated fadeInUp start_input_gogogo inf_tx control_fx control center_control_f control_text">SPEED</h3>
+			<input class="animated fadeInUp start_input_gogogo center_control_f control_fx control" id="time_speed" type="range" min="1" max="10000" step="1" value="1"></input>
+		<h3 id="x1_tx" class="animated fadeInUp start_input_gogogo control control_fx setting_tx inf_tx center_control_f control_text">1x</h3>
+		<h3 id="x100_tx" class="animated fadeInUp start_input_gogogo control control_fx setting_tx inf_tx center_control_f control_text">10000x</h3>
+	</div>
+		<input type="checkbox" class="animated fadeInUp start_input_gogogo control_fx" id="smooth_checkbox"></input>
+		<h3 id="smooth_chk_tx" class="animated fadeInUp start_input_gogogo control_fx inf_tx">smooth</h3>
+	<div class="animated fadeInUp control_fx container" id="year_container_nu"><h2 id="year_nu" class="control in_second control_text">2018</h3></div>
+</body>
+</html>
